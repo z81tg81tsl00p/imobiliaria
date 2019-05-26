@@ -1,0 +1,257 @@
+@font-face {
+    font-family: "TT Norms";
+    src: url("fonts/TTNorms-Regular.woff");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "TT Norms_bold";
+    src: url("fonts/TTNorms-Bold.woff");
+    font-weight: bold;
+}
+
+
+
+html, body{
+    font-family: Roboto,sans-serif;
+    cursor: default;
+    padding: 0;
+    margin: 0;
+    line-height: 1em;
+    width: 100%;
+    height: 100%;
+}
+*{
+    box-sizing: inherit;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body {
+    margin:0;
+    padding:0;
+    overflow: hidden;
+}
+#map {
+    position:absolute;
+    top:0;
+    bottom:0;
+    width:100%;
+    z-index: 0;
+}
+.marker {
+    background-image: url('mapbox-icon');
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    border-radius: 40%;
+    cursor: pointer;
+}
+
+.marker-position {
+    display: none;
+}
+
+.global__container {
+    left: 0;
+    top: 40px;
+    right: 0;
+    z-index: 10;
+    position: absolute;
+}
+
+.header__container{
+    margin: 0 auto;
+    max-width: calc(100vw - 210px);
+    display: flex;
+}
+
+.logo__nav-container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.logo__nav-container{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+}
+
+.nav-item:not(:last-child) {
+    margin-right: 50px;
+
+}
+
+.nav-item, .text-hover-underline {
+    color: #ffffff;
+    font-size: 17px;
+    letter-spacing: -.02em;
+    line-height: 1em;
+    font-style: normal;
+    font-weight: bold;
+    font-family: TT Norms,Helvetica,Arial,sans-serif;
+    transition: color .2s cubic-bezier(.47,0,.745,.715);
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    visibility: inherit;
+    opacity: 1;
+}
+
+.nav-item a{
+    text-align: center;
+    margin: auto;
+}
+
+.text-hover-underline {
+    display: inline-block;
+}
+.text-hover-underline:after {
+    background-color: #ffffff;
+    margin-top: 5px;
+    display: block;
+    content: "";
+    height: 1px;
+    width: 0;
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+}
+
+.text-hover-underline:hover:after, .text-hover-underline:focus:after {
+    width: 100%;
+}
+
+.mail-box-container {
+    margin-left: 64px;
+    height: 18px;
+    width: 18px;
+    display: block;
+    cursor: pointer;
+    background-image: url("icon/message.png");
+    background-size: cover;
+}
+
+
+/* <--START_OF--> Modal window for lot info */
+
+#charms {
+    position: fixed;
+    top: 100px;
+    bottom: 20px;
+    right: 0;
+    left: 50px;
+    display: block;
+    width: 320px;
+    height: 320px;
+    padding: 0;
+    margin: 0;
+    background-color: #000;
+    opacity: 0.6;
+    z-index: 11;
+}
+
+
+
+#charms a.win-command {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-clip: border-box;
+}
+
+#charms .charms-section {
+    margin: 0 40px 40px 40px;
+}
+
+#charms a:hover {
+    background-color: #216475;
+}
+
+#charms .charms-header {
+    position: relative;
+    padding: 40px 0 30px 0;
+}
+
+#charms .charms-header a#pin-charms {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 20px;
+    height: 20px;
+    margin-right: -24px;
+    font-size: 11px;
+    color: #FFF;
+    text-align: center;
+}
+
+#charms .charms-header a#pin-charms.active {
+    color: #000;
+    background-color: #FFF;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+#charms .charms-header h2 {
+    display: inline-block;
+    margin-left: 10px;
+    color: #FFF;
+}
+
+#charms hr {
+    border: 1px solid #357281;
+}
+
+#charms h2,
+#charms h3,
+#charms h4,
+#charms p,
+#charms a,
+#charms label {
+    color: #fff;
+}
+
+#charms .charms-header a.win-backbutton {
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+    line-height: 32px;
+    vertical-align: top;
+}
+
+#charms-body {
+    min-width: 350px;
+}
+
+#charms.slide {
+    left: -320px;
+    -webkit-transition: all 0.36s ease;
+    -moz-transition: all 0.36s ease;
+    -ms-transition: all 0.36s ease;
+    -o-transition: all 0.36s ease;
+    transition: all 0.36s ease;
+}
+
+#charms.slide.in {
+    left: 0;
+}
+
+/* <--END_OF--> Modal window for lot info */
+
+
+.item *{
+    color: #ffffff;
+    opacity: 1;
+}
+
+.item li {
+    margin-bottom: 20px;
+}
+
+
